@@ -24,7 +24,7 @@ flex: 1;
 }
 
 .menu-container {
-max-width: 600px;
+max-width: 800px; /* Alargado ligeiramente para acomodar melhor os 3 botões por linha */
 margin: 40px auto;
 background: white;
 padding: 30px;
@@ -32,7 +32,7 @@ border-radius: 8px;
 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Dispor os botões verticalmente (em coluna) */
+/* Estrutura vertical principal */
 .botoes-lado-a-lado {
 display: flex;
 flex-direction: column; 
@@ -40,12 +40,30 @@ gap: 15px;
 margin: 15px 0;
 }
 
+/* Nova Grelha para expor os Ramos de 3 em 3 */
+.grelha-ramos {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+gap: 15px;
+margin: 5px 0;
+}
+
+/* Adaptação para ecrãs de telemóvel (passa para 1 coluna se for muito estreito) */
+@media (max-width: 600px) {
+.grelha-ramos {
+grid-template-columns: 1fr;
+}
+}
+
 .btn {
-display: block;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px; /* Espaço entre o texto e o símbolo */
 color: white;
 padding: 15px;
 text-decoration: none;
-font-size: 1.1em; 
+font-size: 1.05em; 
 font-weight: bold;
 border-radius: 5px;
 transition: background 0.3s;
@@ -113,15 +131,29 @@ color: #95a5a6;
 
 <div class="menu-container">
 <div class="botoes-lado-a-lado">
-    <!-- 1º BOTÃO: Azul (Árvore) -->
-    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica - ascendentes</a>
+    <!-- 1º BOTÃO: Azul (Árvore) com símbolo -->
+    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica - ascendentes ➔</a>
 
-    <!-- 2º BOTÃO: Verde (Ramo José) -->
-    <a href="ramo_jose_baptista/index.html" class="btn btn-verde">Ramo José Baptista</a>
+    <!-- GRELHA DE 11 BOTÕES VERDES (Expostos de 3 em 3) -->
+    <div class="grelha-ramos">
+        <a href="ramo_isabel_carneiro/index.html" class="btn btn-verde">Isabel (Carneiro) ➔</a>
+        <a href="ramo_augusta_quental/index.html" class="btn btn-verde">Augusta (Quental) ➔</a>
+        <a href="ramo_antonio_baptista/index.html" class="btn btn-verde">António Baptista ➔</a>
+        
+        <a href="ramo_joao_baptista/index.html" class="btn btn-verde">João Baptista ➔</a>
+        <a href="ramo_jose_baptista/index.html" class="btn btn-verde">José Baptista ➔</a>
+        <a href="ramo_raul_baptista/index.html" class="btn btn-verde">Raul Baptista ➔</a>
+        
+        <a href="ramo_aldina_borges/index.html" class="btn btn-verde">Aldina (Borges) ➔</a>
+        <a href="ramo_cristina_baptista/index.html" class="btn btn-verde">Cristina Baptista ➔</a>
+        <a href="ramo_maria_baptista/index.html" class="btn btn-verde">Maria Baptista ➔</a>
+        
+        <a href="ramo_armando_baptista/index.html" class="btn btn-verde">Armando Baptista ➔</a>
+        <a href="ramo_galdina_baptista/index.html" class="btn btn-verde">Galdina Baptista ➔</a>
+    </div>
     
-    <!-- 3º BOTÃO: Laranja (O seu link exato inserido aqui) -->
-    <!-- 3º BOTÃO: Laranja (O seu link exato inserido aqui) -->
-<a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares</a>
+    <!-- 3º BOTÃO: Laranja com símbolo -->
+    <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
 </div>
 
 <span class="brevemente"> Outros Ramos (Brevemente)</span>
