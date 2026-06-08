@@ -24,7 +24,7 @@ flex: 1;
 }
 
 .menu-container {
-max-width: 800px; /* Alargado ligeiramente para acomodar melhor os 3 botões por linha */
+max-width: 800px; /* Alargado para acomodar os 3 botões por linha */
 margin: 40px auto;
 background: white;
 padding: 30px;
@@ -40,7 +40,7 @@ gap: 15px;
 margin: 15px 0;
 }
 
-/* Nova Grelha para expor os Ramos de 3 em 3 */
+/* Grelha para expor os Ramos de 3 em 3 */
 .grelha-ramos {
 display: grid;
 grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
@@ -48,7 +48,7 @@ gap: 15px;
 margin: 5px 0;
 }
 
-/* Adaptação para ecrãs de telemóvel (passa para 1 coluna se for muito estreito) */
+/* Adaptação para ecrãs de telemóvel */
 @media (max-width: 600px) {
 .grelha-ramos {
 grid-template-columns: 1fr;
@@ -78,17 +78,6 @@ transition: background 0.3s;
 /* Cor de Laranja para o botão do Formulário */
 .btn-formulario { background-color: #e67e22; }
 .btn-formulario:hover { background-color: #d35400; }
-
-.brevemente {
-display: block;
-background-color: #bdc3c7;
-color: #7f8c8d;
-padding: 15px;
-margin: 15px 0;
-font-size: 1.2em;
-border-radius: 5px;
-cursor: not-allowed;
-}
 
 /* Caixa de Aviso de Privacidade */
 .privacidade-box {
@@ -155,12 +144,10 @@ color: #95a5a6;
     <!-- 3º BOTÃO: Laranja com símbolo -->
     <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
 </div>
-
-<span class="brevemente"> Outros Ramos (Brevemente)</span>
 </div>
 
 <div class="privacidade-box">
-<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raízes! Deixem nos comentários as vossas memórias ou histórias sobre eles.
+<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raíces! Deixem nos comentários as vossas memórias ou histórias sobre eles.
 </div>
 
 <!-- SECÇÃO DE COMENTÁRIOS DO SITE -->
