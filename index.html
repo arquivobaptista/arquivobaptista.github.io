@@ -119,8 +119,8 @@ color: #95a5a6;
     <!-- 2º BOTÃO: Verde (Ramo José) -->
     <a href="ramo_jose_baptista/index.html" class="btn btn-verde">Ramo José Baptista</a>
     
-    <!-- 3º BOTÃO: Laranja (Link longo e direto corrigido) -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScZzYhedAXY2w03D8zNTnVDr1ylKBK1ehwUtWTADZ1T0jg9cg/viewform" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares</a>
+    <!-- 3º BOTÃO: Laranja (Link longo e direto do Google Forms) -->
+    <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares</a>
 </div>
 
 <span class="brevemente"> Outros Ramos (Brevemente)</span>
@@ -135,13 +135,19 @@ color: #95a5a6;
 <h2>💬 Espaço de Comentários</h2>
 <p style="font-size: 0.9em; color: #7f8c8d; margin-bottom: 20px;">Utilize o espaço abaixo para deixar mensagens à família ou partilhar memórias antigas.</p>
 
-<!-- Caixa de Comentários Automática ligada ao seu GitHub -->
-<script src="https://utteranc.es"
-        repo="arquivobaptista/arquivobaptista.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+<!-- Nova Caixa de Comentários Universal (Disqus) -->
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "https://github.io";  
+        this.page.identifier = "arquivobaptista-home"; 
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://disqus.com';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 </div>
 
