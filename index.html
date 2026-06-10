@@ -1,36 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogia Família Baptista</title>
-    <style>
-        /* [Estilos CSS omitidos para brevidade - mantidos do original] */
-        body { font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; text-align: center; padding: 50px 20px; }
-        .menu-container { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .grelha-ramos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-        .btn { display: block; color: white; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-bottom: 10px; }
-        .btn-verde { background-color: #27ae60; }
-        .btn-azul { background-color: #2980b9; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genealogia Família Baptista</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f7f6;
+color: #333;
+text-align: center;
+padding: 50px 20px;
+display: flex;
+flex-direction: column;
+min-height: 85vh;
+}
+h1 { color: #2c3e50; }
+p { color: #7f8c8d; font-size: 1.1em; }
+
+/* Container principal */
+.content {
+flex: 1;
+}
+
+.menu-container {
+max-width: 800px; /* Alargado para acomodar os 3 botões por linha */
+margin: 40px auto;
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Estrutura vertical principal */
+.botoes-lado-a-lado {
+display: flex;
+flex-direction: column; 
+gap: 15px; 
+margin: 15px 0;
+}
+
+/* Grelha para expor os Ramos de 3 em 3 */
+.grelha-ramos {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+gap: 15px;
+margin: 5px 0;
+}
+
+/* Adaptação para ecrãs de telemóvel */
+@media (max-width: 600px) {
+.grelha-ramos {
+grid-template-columns: 1fr;
+}
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px; /* Espaço entre o texto e o símbolo */
+color: white;
+padding: 15px;
+text-decoration: none;
+font-size: 1.05em; 
+font-weight: bold;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+.btn-verde { background-color: #27ae60; }
+.btn-verde:hover { background-color: #219653; }
+
+.btn-azul { background-color: #2980b9; }
+.btn-azul:hover { background-color: #2471a3; }
+
+/* Nova Cor Azul-Escura para a tecla de Índice de Apelidos */
+.btn-indigo { background-color: #34495e; }
+.btn-indigo:hover { background-color: #2c3e50; }
+
+/* Cor de Laranja para o botão do Formulário */
+.btn-formulario { background-color: #e67e22; }
+.btn-formulario:hover { background-color: #d35400; }
+
+/* Caixa de Aviso de Privacidade */
+.privacidade-box {
+max-width: 580px;
+margin: 30px auto 30px auto;
+padding: 15px 20px;
+background-color: #ebf5fb; 
+border-left: 4px solid #2980b9; 
+border-radius: 4px;
+text-align: left; 
+font-size: 0.92em;
+color: #5d6d7e;
+line-height: 1.5;
+}
+
+/* Zona de Comentários */
+.comentarios-container {
+max-width: 600px;
+margin: 40px auto;
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+text-align: left;
+}
+
+/* Estilo do Rodapé */
+footer {
+margin-top: 50px;
+font-size: 0.9em;
+color: #95a5a6;
+}
+</style>
 </head>
 <body>
-    <h1>Arquivo Genealógico da Família Baptista</h1>
-    <div class="menu-container">
-        <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica ➔</a>
-        <div class="grelha-ramos">
-            <!-- Ramos em .svg -->
-            <a href="ramo_antonio_baptista/index.svg" class="btn btn-verde">António Baptista ➔</a>
-            <a href="ramo_joao_baptista/index.svg" class="btn btn-verde">João Baptista ➔</a>
-            <a href="ramo_jose_baptista/index.svg" class="btn btn-verde">José Baptista ➔</a>
-            <a href="ramo_raul_baptista/index.svg" class="btn btn-verde">Raul Baptista ➔</a>
-            <a href="ramo_aldina_borges/index.svg" class="btn btn-verde">Aldina (Borges) ➔</a>
-            <a href="ramo_isabel_baptista/index.svg" class="btn btn-verde">Armando Baptista ➔</a>
-            <a href="ramo_augusta_baptista/index.svg" class="btn btn-verde">Galdina Baptista ➔</a>
-            
-            <!-- Exceção .html -->
-            <a href="ramo_cristina_baptista/index.html" class="btn btn-verde">Cristina Baptista ➔</a>
-        </div>
+
+<div class="content">
+<h1>Arquivo Genealógico da Família Baptista</h1>
+<p>Selecione um dos ramos familiares abaixo para explorar a nossa história.</p>
+
+<div class="menu-container">
+<div class="botoes-lado-a-lado">
+    <!-- 1º BOTÃO: Azul (Árvore) com símbolo -->
+    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica - ascendentes ➔</a>
+
+    <!-- NOVO BOTÃO: Índice de todos os apelidos (Azul-Escuro) com símbolo -->
+    <a href="indice_apelidos/index.html" class="btn btn-indigo">Índice de todos os apelidos na base de dados ➔</a>
+
+    <!-- GRELHA DE 11 BOTÕES VERDES (Expostos de 3 em 3) -->
+    <div class="grelha-ramos">
+        <a href="ramo_isabel_carneiro/index.html" class="btn btn-verde">Isabel (Carneiro) ➔</a>
+        <a href="ramo_augusta_quental/index.html" class="btn btn-verde">Augusta (Quental) ➔</a>
+        <a href="ramo_antonio_baptista/index.svg" class="btn btn-verde">António Baptista ➔</a>
+        
+        <a href="ramo_joao_baptista/index.svg" class="btn btn-verde">João Baptista ➔</a>
+        <a href="ramo_jose_baptista/index.svg" class="btn btn-verde">José Baptista ➔</a>
+        <a href="ramo_raul_baptista/index.svg" class="btn btn-verde">Raul Baptista ➔</a>
+        
+        <a href="ramo_aldina_borges/index.svg" class="btn btn-verde">Aldina (Borges) ➔</a>
+        
+        <!-- EXCEÇÃO: Cristina em .html -->
+        <a href="ramo_cristina_baptista/index.html" class="btn btn-verde">Cristina Baptista ➔</a>
+        <a href="ramo_maria_baptista/index.html" class="btn btn-verde">Maria Baptista ➔</a>
+        
+        <a href="ramo_isabel_baptista/index.svg" class="btn btn-verde">Armando Baptista ➔</a>
+        <a href="ramo_augusta_baptista/index.svg" class="btn btn-verde">Galdina Baptista ➔</a>
     </div>
+    
+    <!-- 3º BOTÃO: Laranja com símbolo -->
+    <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
+</div>
+</div>
+
+<div class="privacidade-box">
+<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raízes! Deixem nos comentários as vossas memórias ou histórias sobre eles.
+</div>
+
+<!-- SECÇÃO DE COMENTÁRIOS DO SITE -->
+<div class="comentarios-container">
+<h2>💬 Espaço de Comentários</h2>
+<p style="font-size: 0.9em; color: #7f8c8d; margin-bottom: 20px;">Utilize o espaço abaixo para deixar mensagens à família ou partilhar memórias antigas.</p>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "https://github.io";  
+        this.page.identifier = "arquivobaptista-home"; 
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://disqus.com';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+</div>
+
+</div>
+
+<footer>
+<p>Desenvolvido por <strong>@Luis Borges</strong> | 2026</p>
+</footer>
+
 </body>
 </html>
