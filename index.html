@@ -40,14 +40,14 @@ gap: 15px;
 margin: 15px 0;
 }
 
-/* Grelha para dividir o segundo botão em dois */
+/* Grelhas duplas (2 colunas) */
 .grelha-dupla {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 15px;
 }
 
-/* Grelha para expor os Ramos de 3 em 3 */
+/* Grelha de Ramos (3 colunas) */
 .grelha-ramos {
 display: grid;
 grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
@@ -82,11 +82,11 @@ transition: background 0.3s;
 .btn-azul { background-color: #2980b9; }
 .btn-azul:hover { background-color: #2471a3; }
 
-/* Nova Cor Azul-Escura para a tecla de Índice de Apelidos */
+/* Cor Índigo para o Índice de Apelidos */
 .btn-indigo { background-color: #34495e; }
 .btn-indigo:hover { background-color: #2c3e50; }
 
-/* Cor Roxa/Cinza Escuro para o botão de Documentos */
+/* Cor Cinzenta para o botão de Documentos */
 .btn-documentos { background-color: #7f8c8d; }
 .btn-documentos:hover { background-color: #95a5a6; }
 
@@ -130,24 +130,37 @@ color: #95a5a6;
 <body>
 
 <div class="content">
-<h1>Arquivo Genealógico da Família Baptista e Borges</h1>
+<h1>Arquivo Genealógico da Família Baptista</h1>
 <p>Selecione um dos ramos familiares abaixo para explorar a nossa história.</p>
 
 <div class="menu-container">
 <div class="botoes-lado-a-lado">
-    <!-- 1º BOTÃO: Azul (Árvore) com símbolo -->
-    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica Baptistas - ascendentes ➔</a>
+    <!-- 1º BLOCO: BAPTISTAS -->
+    <!-- Botão Azul: Árvore Baptista -->
+    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica - ascendentes ➔</a>
 
-    <!-- SEGUNDO BOTÃO DIVIDIDO EM DOIS -->
+    <!-- Dois botões em grelha: Índice e Documentos Baptistas -->
     <div class="grelha-dupla">
-        <!-- Parte 1: Índice de Apelidos original -->
         <a href="indice_apelidos/index.html" class="btn btn-indigo">Índice de todos os apelidos ➔</a>
-        
-        <!-- Parte 2: NOVO BOTÃO Documentos Baptistas -->
         <a href="documentos_baptistas/" class="btn btn-documentos">Documentos da Família ➔</a>
     </div>
+         
+    <!-- Botão Laranja: Formulário -->
+    <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
 
-    <!-- GRELHA DE BOTÕES VERDES (Alinhada e Fechada Corretamente) -->
+
+    <!-- 2º BLOCO: BORGES (Adicionado por baixo da tecla laranja) -->
+    <!-- Botão Azul: Árvore Borges -->
+    <a href="site_arvore_borges/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica Borges ➔</a>
+
+    <!-- Dois botões em grelha: Índice e Documentos Borges -->
+    <div class="grelha-dupla">
+        <a href="indice_apelidos_borges/index.html" class="btn btn-indigo">Índice de todos os apelidos Borges ➔</a>
+        <a href="documentos_borges/" class="btn btn-documentos">Documentos da Família Borges ➔</a>
+    </div>
+
+
+    <!-- 3º BLOCO: 9 RAMOS FAMILIARES (Alinhados de 3 em 3) -->
     <div class="grelha-ramos">
         <a href="ramo_isabel_carneiro/index.svg" class="btn btn-verde">Isabel (Carneiro) ➔</a>
         <a href="ramo_augusta_quental/index.svg" class="btn btn-verde">Augusta (Quental) ➔</a>
@@ -158,19 +171,14 @@ color: #95a5a6;
         <a href="ramo_raul_baptista/index.svg" class="btn btn-verde">Raul Baptista ➔</a>
         
         <a href="ramo_aldina_borges/index.svg" class="btn btn-verde">Aldina (Borges) ➔</a>
-        
-        <!-- Botões extra para preencher a grelha (substitua pelos seus ramos em falta) -->
-        <a href="ramo_exemplo8/index.svg" class="btn btn-verde">Ramo Família 8 ➔</a>
-        <a href="ramo_exemplo9/index.svg" class="btn btn-verde">Ramo Família 9 ➔</a>
+        <a href="ramo_familia8/index.svg" class="btn btn-verde">Ramo Família 8 ➔</a>
+        <a href="ramo_familia9/index.svg" class="btn btn-verde">Ramo Família 9 ➔</a>
     </div>
-         
-    <!-- 3º BOTÃO: Laranja com símbolo -->
-    <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
 </div>
 </div>
 
 <div class="privacidade-box">
-<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raíces! Deixem nos comentários as vossas memórias ou histórias sobre eles.
+<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raízes! Deixem nos comentários as vossas memórias ou histórias sobre eles.
 </div>
 
 <!-- SECÇÃO DE COMENTÁRIOS DO SITE -->
