@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genealogia Família Baptista</title>
+<title>Genealogia Família Baptista & Borges</title>
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -55,6 +55,18 @@ gap: 15px;
 margin: 5px 0;
 }
 
+/* Títulos de Separação de Famílias */
+.titulo-familia {
+text-align: left;
+font-size: 1.2em;
+font-weight: bold;
+color: #2c3e50;
+margin-top: 15px;
+margin-bottom: 5px;
+border-bottom: 2px solid #ddd;
+padding-bottom: 5px;
+}
+
 /* Adaptação para ecrãs de telemóvel */
 @media (max-width: 600px) {
 .grelha-ramos, .grelha-dupla {
@@ -76,23 +88,41 @@ border-radius: 5px;
 transition: background 0.3s;
 }
 
+/* ================= CORES FAMÍLIA BAPTISTA ================= */
 .btn-verde { background-color: #27ae60; }
 .btn-verde:hover { background-color: #219653; }
 
 .btn-azul { background-color: #2980b9; }
 .btn-azul:hover { background-color: #2471a3; }
 
-/* Cor Índigo para o Índice de Apelidos */
 .btn-indigo { background-color: #34495e; }
 .btn-indigo:hover { background-color: #2c3e50; }
 
-/* Cor Cinzenta para o botão de Documentos */
 .btn-documentos { background-color: #7f8c8d; }
 .btn-documentos:hover { background-color: #95a5a6; }
 
 /* Cor de Laranja para o botão do Formulário */
 .btn-formulario { background-color: #e67e22; }
 .btn-formulario:hover { background-color: #d35400; }
+
+
+/* ================= NOVAS CORES FAMÍLIA BORGES ================= */
+/* Árvore Borges (Vermelho Escuro / Vinho) */
+.btn-borges-azul { background-color: #c0392b; }
+.btn-borges-azul:hover { background-color: #a93226; }
+
+/* Índice Borges (Castanho Escuro) */
+.btn-borges-indigo { background-color: #6e2c00; }
+.btn-borges-indigo:hover { background-color: #5e2500; }
+
+/* Documentos Borges (Cinzento Escuro Metálico) */
+.btn-borges-documentos { background-color: #34495e; }
+.btn-borges-documentos:hover { background-color: #2c3e50; }
+
+/* Ramos Borges (Tons Ocre / Mostarda Escuro) */
+.btn-borges-verde { background-color: #d35400; }
+.btn-borges-verde:hover { background-color: #ba4a00; }
+
 
 /* Caixa de Aviso de Privacidade */
 .privacidade-box {
@@ -135,6 +165,9 @@ color: #95a5a6;
 
 <div class="menu-container">
 <div class="botoes-lado-a-lado">
+    
+    <div class="titulo-familia">🌳 Família Baptista</div>
+
     <!-- 1º BOTÃO: Azul (Árvore) original -->
     <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica - ascendentes ➔</a>
 
@@ -144,7 +177,7 @@ color: #95a5a6;
         <a href="documentos_baptistas/" class="btn btn-documentos">Documentos Baptistas ➔</a>
     </div>
 
-    <!-- GRELHA ORIGINAL DE BOTÕES VERDES (Mantida como estava) -->
+    <!-- GRELHA ORIGINAL DE BOTÕES VERDES -->
     <div class="grelha-ramos">
         <a href="ramo_isabel_carneiro/index.svg" class="btn btn-verde">Isabel (Carneiro) ➔</a>
         <a href="ramo_augusta_quental/index.svg" class="btn btn-verde">Augusta (Quental) ➔</a>
@@ -161,30 +194,32 @@ color: #95a5a6;
     <a href="https://google.com" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
 
 
-    <!-- ================= NOVO CONTEÚDO ADICIONADO POR BAIXO DO LARANJA ================= -->
+    <!-- ================= CONTEÚDO DA FAMÍLIA BORGES COM CORES DISTINTAS ================= -->
+    
+    <div class="titulo-familia">📜 Família Borges</div>
 
-    <!-- Nova tecla: Árvore Genealógica Borges -->
-    <a href="site_arvore_borges/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica Borges ➔</a>
+    <!-- Nova tecla: Árvore Genealógica Borges (Vermelho/Vinho) -->
+    <a href="site_arvore_borges/index.svg" class="btn btn-borges-azul" target="_blank">Árvore Genealógica Borges ➔</a>
 
-    <!-- Em baixo: Duas teclas com Índice e Documentos Borges -->
+    <!-- Em baixo: Duas teclas com Índice e Documentos Borges (Tons Escuros) -->
     <div class="grelha-dupla">
-        <a href="indice_apelidos_borges/index.html" class="btn btn-indigo">Índice de todos os apelidos Borges ➔</a>
-        <a href="documentos_borges/" class="btn btn-documentos">Documentos da Família Borges ➔</a>
+        <a href="indice_apelidos_borges/index.html" class="btn btn-borges-indigo">Índice de todos os apelidos Borges ➔</a>
+        <a href="documentos_borges/" class="btn btn-borges-documentos">Documentos da Família Borges ➔</a>
     </div>
 
-    <!-- Em baixo: 9 teclas de ramo família verde -->
+    <!-- Em baixo: 9 teclas de ramo família verde (Cor de Laranja Escuro / Ocre) -->
     <div class="grelha-ramos">
-        <a href="ramo_borges1/index.svg" class="btn btn-verde">Ramo Borges 1 ➔</a>
-        <a href="ramo_borges2/index.svg" class="btn btn-verde">Ramo Borges 2 ➔</a>
-        <a href="ramo_borges3/index.svg" class="btn btn-verde">Ramo Borges 3 ➔</a>
+        <a href="ramo_borges1/index.svg" class="btn btn-borges-verde">Ramo Borges 1 ➔</a>
+        <a href="ramo_borges2/index.svg" class="btn btn-borges-verde">Ramo Borges 2 ➔</a>
+        <a href="ramo_borges3/index.svg" class="btn btn-borges-verde">Ramo Borges 3 ➔</a>
         
-        <a href="ramo_borges4/index.svg" class="btn btn-verde">Ramo Borges 4 ➔</a>
-        <a href="ramo_borges5/index.svg" class="btn btn-verde">Ramo Borges 5 ➔</a>
-        <a href="ramo_borges6/index.svg" class="btn btn-verde">Ramo Borges 6 ➔</a>
+        <a href="ramo_borges4/index.svg" class="btn btn-borges-verde">Ramo Borges 4 ➔</a>
+        <a href="ramo_borges5/index.svg" class="btn btn-borges-verde">Ramo Borges 5 ➔</a>
+        <a href="ramo_borges6/index.svg" class="btn btn-borges-verde">Ramo Borges 6 ➔</a>
         
-        <a href="ramo_borges7/index.svg" class="btn btn-verde">Ramo Borges 7 ➔</a>
-        <a href="ramo_borges8/index.svg" class="btn btn-verde">Ramo Borges 8 ➔</a>
-        <a href="ramo_borges9/index.svg" class="btn btn-verde">Ramo Borges 9 ➔</a>
+        <a href="ramo_borges7/index.svg" class="btn btn-borges-verde">Ramo Borges 7 ➔</a>
+        <a href="ramo_borges8/index.svg" class="btn btn-borges-verde">Ramo Borges 8 ➔</a>
+        <a href="ramo_borges9/index.svg" class="btn btn-borges-verde">Ramo Borges 9 ➔</a>
     </div>
     <!-- ================================================================================= -->
 
