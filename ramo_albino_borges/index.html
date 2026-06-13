@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramo Albino Martins Borges</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f7f6;
+color: #333;
+padding: 40px 20px;
+max-width: 850px;
+margin: 0 auto;
+}
+h1 { color: #2c3e50; text-align: center; }
+.subtitulo { color: #7f8c8d; text-align: center; margin-bottom: 40px; }
+
+.seccao-documentos {
+background: white;
+padding: 25px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+margin-bottom: 25px;
+}
+.seccao-documentos h2 {
+color: #27ae60;
+border-bottom: 2px solid #e8f8f5;
+padding-bottom: 8px;
+margin-top: 0;
+font-size: 1.3em;
+}
+
+/* Estrutura flexível para colocar Foto + Texto lado a lado */
+.linha-parente {
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 15px 0;
+border-bottom: 1px dotted #ddd;
+}
+.linha-parente:last-child {
+border-bottom: none;
+}
+
+/* Moldura para as fotografias antigas */
+.foto-parente {
+width: 110px;
+height: 140px;
+object-fit: cover;
+border: 4px solid white;
+box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+border-radius: 4px;
+background-color: #e5e8e8;
+flex-shrink: 0;
+}
+
+.dados-familia {
+font-size: 1.05em;
+line-height: 1.5;
+color: #2c3e50;
+margin-bottom: 8px;
+}
+.destaque-nome {
+font-weight: bold;
+color: #27ae60;
+}
+.detalhes {
+font-size: 0.95em;
+color: #7f8c8d;
+display: block;
+margin-top: 2px;
+}
+
+.doc-link {
+color: #2980b9;
+text-decoration: none;
+font-size: 0.95em;
+font-weight: bold;
+transition: color 0.2s;
+display: inline-flex;
+align-items: center;
+gap: 5px;
+margin-top: 5px;
+}
+.doc-link:hover {
+color: #e67e22;
+text-decoration: underline;
+}
+
+.btn-voltar {
+display: inline-block;
+margin-top: 20px;
+color: #7f8c8d;
+text-decoration: none;
+font-weight: bold;
+}
+.btn-voltar:hover { color: #333; }
+
+/* Ajuste para ecrãs de telemóvel */
+@media (max-width: 600px) {
+.linha-parente {
+flex-direction: column;
+text-align: center;
+}
+.linha-parente div {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+}
+</style>
+</head>
+<body>
+
+<h1>🌳 Ramo Albino Martins Borges</h1>
+<p class="subtitulo">Histórico, fotografias e registos documentais da família.</p>
+
+<!-- ================= SECÇÃO: O CASAL PRINCIPAL ================= -->
+<div class="seccao-documentos">
+    <h2>Descendência de Albino Martins Borges</h2>
+    
+    <!-- ALBINO -->
+    <div class="linha-parente">
+        <img src="fotos/foto_albino.jpeg" alt="Albino Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">Albino Martins Borges</span> (1867 - 1943)
+                <span class="detalhes">📍 Natural de Junqueira de Cima, Freguesia da Junqueira, Vale de Cambra.</span>
+            </div>
+            <a href="assento_batismo_albino.pdf" class="doc-link" target="_blank">📂 Ver Assento de Batismo / Óbito ➔</a>
+        </div>
+    </div>
+
+    <!-- MARIA TAVARES -->
+    <div class="linha-parente">
+        <img src="fotos/foto_maria_tavares.jpg" alt="Maria Tavares da Silva" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">Maria Tavares da Silva</span> (1871 - 1970)
+                <span class="detalhes">📍 Natural de Vila Cova, Freguesia da Junqueira, Vale de Cambra.</span>
+            </div>
+            <a href="assento_batismo_mariatavares.pdf" class="doc-link" target="_blank">📂 Ver Assento de Batismo / Óbito ➔</a>
+        </div>
+    </div>
+
+    <!-- CASAMENTO -->
+    <div class="linha-parente">
+        <div style="width: 110px; display: flex; justify-content: center; font-size: 2em; flex-shrink: 0;">💍</div>
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">Casamento de Albino & Maria</span> (Casados em 1891)
+            </div>
+            <a href="assento_casamento_albino_maria.pdf" class="doc-link" target="_blank">📂 Ver Assento de Casamento ➔</a>
+        </div>
+    </div>
+</div>
+
+<!-- ================= SECÇÃO: OS FILHOS ================= -->
+<div class="seccao-documentos">
+    <h2> Filhos do Casamento</h2>
+    
+    <!-- Filho 1 -->
+    <div class="linha-parente">
+        <img src="fotos/foto_filho_mariarosa.jpg" alt="Maria Rosa Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">1. Maria Rosa Martins Borges</span> (Nascida em 1892)
+            </div>
+            <a href="registo_maria_rosa_1892.pdf" class="doc-link" target="_blank">📂 Ver Documento PDF ➔</a>
+        </div>
+    </div>
+    
+    <!-- Filho 2 -->
+    <div class="linha-parente">
+        <img src="fotos/foto_filho_custodio.jpg" alt="Custódio Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">2. Custódio Martins Borges</span> (Nascido em 1895 - Falecido)
+                <span class="detalhes">💍 Casou a 22/06/1920 com Luciana Tavares da Silva (natural de Castelões, Vale de Cambra).</span>
+            </div>
+            <a href="registo_custodio_1895.pdf" class="doc-link" target="_blank">📂 Ver Documento / Registo de Casamento ➔</a>
+        </div>
+    </div>
+    
+    <!-- Filho 3 -->
+    <div class="linha-parente">
+        <img src="fotos/foto_filho_manoel.jpeg" alt="Manoel Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">3. Manoel Martins Borges</span> (Nascido em 1897 - Falecido)
+                <span class="detalhes">📍 Natural de Vila Cova, Freguesia da Junqueira.</span>
+                <span class="detalhes">💍 Casou em 1928 com Aldina Baptista Borges (1908 - 1988, natural do Lubango, Angola).</span>
+            </div>
+            <a href="registo_manoel_1897.pdf" class="doc-link" target="_blank">📂 Ver Documento / Registo de Casamento ➔</a>
+        </div>
+    </div>
+    
+    <!-- Filho 4 -->
+    <div class="linha-parente">
+        <img src="fotos/foto_filho_josemaria.jpg" alt="José Maria Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">4. José Maria Martins Borges</span> (Nascido em 1899)
+                <span class="detalhes">💍 Casou a 04/08/1927 com Carolina Martins da Silva.</span>
+            </div>
+            <a href="registo_jose_maria_1899.pdf" class="doc-link" target="_blank">📂 Ver Documento / Registo de Casamento ➔</a>
+        </div>
+    </div>
+    
+    <!-- Filho 5 -->
+    <div class="linha-parente">
+        <img src="fotos/foto_filho_mariajoaquina.jpg" alt="Maria Joaquina Martins Borges" class="foto-parente">
+        <div>
+            <div class="dados-familia">
+                <span class="destaque-nome">5. Maria Joaquina Martins Borges</span> (Nascida a 09/05/1902)
+            </div>
+            <a href="registo_maria_joaquina_1902.pdf" class="doc-link" target="_blank">📂 Ver Documento PDF ➔</a>
+        </div>
+    </div>
+</div>
+
+<center>
+    <a href="../index.html" class="btn-voltar">⬅️ Voltar à Página Principal</a>
+</center>
+
+</body>
+</html>
+
