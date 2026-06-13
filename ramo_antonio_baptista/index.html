@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+              body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            overflow-x: auto;
+        }
+        .subtitulo { color: #7f8c8d; margin-bottom: 40px; font-size: 0.9em; }
+        
+        /* Estrutura da Árvore */
+              .arvore {
+            display: block;
+            white-space: nowrap;
+            margin: 0 auto;
+            padding: 20px;
+            width: max-content;
+        }
+        .arvore ul {
+            padding-top: 20px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+        .arvore li {
+            float: left; 
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+        /* Linhas conectoras */
+        .arvore li::before, .arvore li::after {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            right: 50%;
+            border-top: 2px solid #27ae60;
+            width: 50%; 
+            height: 20px;
+        }
+        .arvore li::after {
+            right: auto; 
+            left: 50%;
+            border-left: 2px solid #27ae60;
+        }        /* Remove as linhas flutuantes no topo da árvore */
+        .arvore > ul > li::before, 
+        .arvore > ul > li::after,
+        .arvore > ul > li > ul::before {
+            display: none !important;
+        }
+
+		        /* Remove as linhas flutuantes no topo da árvore */
+        .arvore > ul > li::before, 
+        .arvore > ul > li::after,
+        .arvore > ul > li > ul::before {
+            display: none !important;
+        }
+
+        .arvore li:only-child::after, .arvore li:only-child::before {
+            display: none;
+        }
+        .arvore li:only-child { 
+            padding-top: 0;
+        }
+        .arvore li:first-child::before, .arvore li:last-child::after {
+            border: 0 none;
+        }
+        .arvore li:last-child::before {
+            border-right: 2px solid #27ae60;
+            border-radius: 0 5px 0 0;
+        }
+        .arvore li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        .arvore ul ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left: 2px solid #27ae60;
+            width: 0; 
+            height: 20px;
+        }
+        /* Bloco do Familiar (Cartão) */
+        .casal-bloco {
+            display: inline-flex;
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #27ae60;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .membro {
+            text-align: center;
+            width: 110px;
+        }
+        .membro img {
+            width: 70px;
+            height: 85px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #e5e8e8;
+        }
+        .membro .parentesco {
+            font-size: 0.7em;
+            color: #27ae60;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: block;
+        }
+        .membro .nome {
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 3px 0;
+            white-space: normal;
+            color: #2c3e50;
+        }
+        .membro .datas {
+            font-size: 0.7em;
+            color: #7f8c8d;
+        }
+        .falecido { color: #e74c3c; font-weight: bold; }
+        
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 5px;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .btn-voltar:hover { color: #333; }
+    </style>
+</head>
+<body>
+
+<body>
+
+    <h1>Descendência e Ramificações da Família Baptista</h1>
+    <p class="subtitulo">Árvore Genealógica Familiar</p>
+
+    <div class="arvore">
+        <ul>
+            <!-- NÍVEL TOPO: PAIS DA ALDINA E PAIS DO MANOEL -->
+            <!-- ================= GERAÇÃO 1: BISAVÓS MATERNOS ================= -->
+            <li>
+                <div style="display: inline-flex; gap: 80px; justify-content: center;">
+                    <div class="casal-bloco" style="border-color: #7f8c8d; scale: 0.9;">
+                        <div class="membro"><span class="parentesco" style="color:#7f8c8d;">Bisavô</span><img src="fotos/substituir.png" alt="Pai de Domingues"><div class="nome">Pai de Domingues</div></div>
+                        <div class="membro"><span class="parentesco" style="color:#7f8c8d;">Bisavó</span><img src="fotos/substituir.png" alt="Lourença Marques"><div class="nome">Lourença Marques</div></div>
+                    </div>
+                    <div class="casal-bloco" style="border-color: #7f8c8d; scale: 0.9;">
+                        <div class="membro"><span class="parentesco" style="color:#7f8c8d;">Bisavô</span><img src="fotos/substituir.png" alt="Manoel Corrêa"><div class="nome">Manoel Corrêa</div></div>
+                        <div class="membro"><span class="parentesco" style="color:#7f8c8d;">Bisavó</span><img src="fotos/substituir.png" alt="Jacinta Nóbrega"><div class="nome">Jacinta Nóbrega</div></div>
+                    </div>
+                </div>
+
+                <ul>
+                    <!-- ================= GERAÇÃO 2: AVÓS MATERNOS E PATERNOS ================= -->
+                    <li>
+                        <div style="display: inline-flex; gap: 100px; justify-content: center;">
+                            <!-- Avós Maternos -->
+                              <!-- Avós Maternos -->
+                            <div class="casal-bloco" style="border-color: #34495e;">
+                                <div class="membro" style="width: 140px;"><span class="parentesco" style="color:#34495e;">Avô Materno</span><img src="fotos/substituir.png" alt="Domingues Baptista"><div class="nome">Domingues Baptista</div><div class="datas">Filho de Lourença M.</div></div>
+                                <div class="membro" style="width: 140px;"><span class="parentesco" style="color:#34495e;">Avô Materna</span><img src="fotos/substituir.png" alt="Helena de Nóbrega"><div class="nome">Helena de Nóbrega</div><div class="datas">Filha de Manoel C. & N.</div></div>
+                            </div>
+                            <!-- Avós Paternos -->
+                            <div class="casal-bloco" style="border-color: #34495e;">
+                                <div class="membro" style="width: 140px;"><span class="parentesco" style="color:#34495e;">Avô Paterno</span><img src="fotos/substituir.png" alt="Joaquim Martins"><div class="nome" style="font-size:0.75em;">Joaquim Martins Borges da Silva Samthiago</div><div class="datas" style="font-size:0.65em;">N. 1827 / Batismo: 13/11/1827</div></div>
+                                <div class="membro" style="width: 140px;"><span class="parentesco" style="color:#34495e;">Avó Paterna</span><img src="fotos/substituir.png" alt="Rosália Tavares"><div class="nome" style="font-size:0.75em;">Rosália / Rosa Maria Tavares Martins da Silva</div><div class="datas" style="font-size:0.65em;">Vila Cova, Junqueira</div></div>
+                            </div>
+                        </div>
+
+                        <ul>
+                            <!-- ================= GERAÇÃO 3: PAIS DE ALDINA E MANOEL ================= -->
+                            <li>
+                                <div style="display: inline-flex; gap: 80px; justify-content: center;">
+                                    <!-- Pais de Aldina -->
+                                    <div class="casal-bloco" style="border-color: #27ae60;">
+                                        <div class="membro"><span class="parentesco" style="color:#27ae60;">Pai de Aldina</span><img src="fotos/person_unknown.png" alt="Pai de Aldina"><div class="nome">Nome do Pai</div><div class="datas">Filho de Domingues & Helena</div></div>
+                                        <div class="membro"><span class="parentesco" style="color:#27ae60;">Mãe de Aldina</span><img src="fotos/substituir_mae_aldina.jpg" alt="Mãe de Aldina"><div class="nome">Nome da Mãe</div></div>
+                                    </div>
+                                    <!-- Pais de Manoel -->
+                                    <div class="casal-bloco" style="border-color: #27ae60;">
+                                        <div class="membro"><span class="parentesco" style="color:#27ae60;">Pai de Manoel</span><img src="fotos/substituir_pai_manoel.jpg" alt="Pai de Manoel"><div class="nome">Nome do Pai</div><div class="datas">Filho de Joaquim & Rosália</div></div>
+                                        <div class="membro"><span class="parentesco" style="color:#27ae60;">Mãe de Manoel</span><img src="fotos/substituir_mae_manoel.jpg" alt="Mãe de Manoel"><div class="nome">Nome da Mãe</div></div>
+                                    </div>
+                                </div>
+
+                                <ul>
+                                    <!-- ================= GERAÇÃO 4: CASAL PRINCIPAL ================= -->
+                                    <li>
+                                        <div class="casal-bloco" style="border-width: 3px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                                            <div class="membro">
+                                                <span class="parentesco" style="font-size:0.8em;">Aldina (Neta)</span>
+                                                <img src="fotos/aldina_baptista.png" alt="Aldina">
+                                                <div class="nome">Aldina Baptista Borges</div>
+                                                <div class="datas">1908 - 1988</div>
+                                            </div>
+                                            <div class="membro">
+                                                <span class="parentesco" style="font-size:0.8em;">Manoel (Neto)</span>
+                                                <img src="fotos/manuel_borges.jpg" alt="Manuel">
+                                                <div class="nome">Manoel Martins Borges</div>
+                                                <div class="datas">1897 - Falecido</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <ul>
+
+
+                            <!-- Daqui para baixo continuam as linhagens existentes (Arlete, Estela, Arlindo) -->
+  
+                    <!-- LINHAGEM 1: ARLETE JORGE -->
+                    <li>
+                        <div class="casal-bloco" style="border-color: #3498db;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#3498db;">Filha</span>
+                                <img src="fotos/arlete_jorge.jpg" alt="Arlete">
+                                <div class="nome">Arlete Borges</div>
+                            </div>
+                            <div class="membro">
+                                <span class="parentesco" style="color:#3498db;">Cônjuge</span>
+                                <img src="fotos/veranio_jorge.jpg" alt="Verânio">
+                                <div class="nome">Verânio Jorge</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #3498db;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#3498db;">Neto</span>
+                                        <img src="fotos/carlos_f_jorge.jpg" alt="Carlos">
+                                        <div class="nome">Carlos F. Jorge</div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="casal-bloco" style="border-color: #3498db;">
+                                            <div class="membro">
+                                                <span class="parentesco" style="color:#3498db;">Bisneto</span>
+                                                <img src="fotos/person_unknown.png" alt="Fábio">
+                                                <div class="nome">Fábio Jorge</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="casal-bloco" style="border-color: #3498db;">
+                                            <div class="membro">
+                                                <span class="parentesco" style="color:#3498db;">Bisneta</span>
+                                                <img src="fotos/person_female.png" alt="Nisa">
+                                                <div class="nome">Nisa Jorge</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #3498db;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#3498db;">Neta</span>
+                                        <img src="fotos/paula_jorge.jpg" alt="Paula">
+                                        <div class="nome">Paula Jorge</div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="casal-bloco" style="border-color: #3498db;">
+                                            <div class="membro">
+                                                <span class="parentesco" style="color:#3498db;">Bisneto</span>
+                                                <img src="fotos/person_unknown.png" alt="Daniel">
+                                                <div class="nome">Daniel Santos</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="casal-bloco" style="border-color: #3498db;">
+                                            <div class="membro">
+                                                <span class="parentesco" style="color:#3498db;">Bisneto</span>
+                                                <img src="fotos/person_unknown.png" alt="Hugo">
+                                                <div class="nome">Hugo Santos</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- LINHAGEM 2: ESTELA SANTIAGO -->
+                    <li>
+                        <div class="casal-bloco" style="border-color: #e67e22;">
+                    <div class="membro">
+                        <span class="parentesco" style="color:#e67e22;">Filha</span>
+                        <img src="fotos/estela_santiago.jpg" alt="Estela">
+                        <div class="nome">Estela Santiago</div>
+                        <div class="datas falecido">Falecida</div>
+                    </div>
+                    <div class="membro">
+                        <span class="parentesco" style="color:#e67e22;">Cônjuge</span>
+                        <img src="fotos/manuel_santiago.jpg" alt="Manuel">
+                        <div class="nome">Manuel Santiago</div>
+                        <div class="datas falecido">Falecido</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div class="casal-bloco" style="border-color: #e67e22;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#e67e22;">Neta</span>
+                                <img src="fotos/nela_santiago.jpg" alt="Nela">
+                                <div class="nome">Nela Santiago</div>
+                                <div class="datas falecido">Falecida</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="casal-bloco" style="border-color: #e67e22;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#e67e22;">Neta</span>
+                                <img src="fotos/sao_santiago.jpg" alt="São">
+                                <div class="nome">São Santiago</div>
+                                <div class="datas falecido">Falecida</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="casal-bloco" style="border-color: #e67e22;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#e67e22;">Neto</span>
+                                <img src="fotos/norberto_santiago.jpg" alt="Norberto">
+                                <div class="nome">N. Santiago</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #e67e22;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#e67e22;">Bisneta</span>
+                                        <img src="fotos/person_female.png" alt="Katheleen">
+                                        <div class="nome">Katheleen S.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #e67e22;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#e67e22;">Bisneta</span>
+                                        <img src="fotos/person_female.png" alt="Gisela">
+                                        <div class="nome">Gisela S.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #e67e22;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#e67e22;">Bisneta</span>
+                                        <img src="fotos/person_female.png" alt="Nádia">
+                                        <div class="nome">Nádia S.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #e67e22;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#e67e22;">Bisneta</span>
+                                        <img src="fotos/person_female.png" alt="Liliana">
+                                        <div class="nome">Liliana S.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- LINHAGEM 3: ARLINDO MANUEL -->
+            <li>
+                <div class="casal-bloco" style="border-color: #9b59b6;">
+                    <div class="membro">
+                        <span class="parentesco" style="color:#9b59b6;">Filho</span>
+                        <img src="fotos/arlindo_m_borges.jpeg" alt="Arlindo">
+                        <div class="nome">Arlindo Borges</div>
+                        <div class="datas">1937 - 1987</div>
+                    </div>
+                    <div class="membro">
+                        <span class="parentesco" style="color:#9b59b6;">Cônjuge</span>
+                        <img src="fotos/substituir_conjuge_arlindo.jpg" alt="Cônjuge de Arlindo">
+                        <div class="nome">Nome do Cônjuge</div>
+                        <div class="datas">Datas / Local</div>
+                    </div>
+                </div>
+                    <li>
+                        <div class="casal-bloco" style="border-color: #9b59b6;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#9b59b6;">Neto</span>
+                                <img src="fotos/jose_manuel_borges.jpg" alt="José">
+                                <div class="nome">José M. Borges</div>
+                            </div>
+                            <div class="membro">
+                                <span class="parentesco" style="color:#9b59b6;">Cônjuge</span>
+                                <img src="fotos/dulcineia_d_borges.jpg" alt="Dulcineia">
+                                <div class="nome">Dulcineia B.</div>
+                                <div class="datas falecido">(†)</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #9b59b6;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#9b59b6;">Bisneto</span>
+                                        <img src="fotos/jose_diogo_borges.jpg" alt="Diogo">
+                                        <div class="nome">José Diogo B.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #9b59b6;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#9b59b6;">Bisneta</span>
+                                        <img src="fotos/eliana_borges.jpg" alt="Eliana">
+                                        <div class="nome">Eliana Borges</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="casal-bloco" style="border-color: #9b59b6;">
+                            <div class="membro">
+                                <span class="parentesco" style="color:#9b59b6;">Neto</span>
+                                <img src="fotos/luis_alberto_borges.jpg" alt="Luis">
+                                <div class="nome">Luis A. Borges</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="casal-bloco" style="border-color: #9b59b6;">
+                                    <div class="membro">
+                                        <span class="parentesco" style="color:#9b59b6;">Bisneto</span>
+                                        <img src="fotos/luis_daniel_borges.jpg" alt="Daniel">
+                                        <div class="nome">Luis Daniel B.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p><a href="../index.html" class="btn-voltar">⬅ Voltar à Página Principal</a></p>
+
+</body>
+</html>
